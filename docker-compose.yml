@@ -1,0 +1,11 @@
+version: "1"
+services:
+  openai-style-api:
+    image: tianminghui/openai-style-api
+    container_name: openai-style-api
+    ports:
+      - "8090:8090"
+    environment:
+      - ADMIN-TOKEN=admin
+    volumes:
+      - ./model-config.json:/app/model-config.json
